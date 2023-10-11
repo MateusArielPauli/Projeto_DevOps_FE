@@ -39,9 +39,10 @@ function Header(){
 function App() {
   return (
     <>
-      <Header/>
+      
 
       <BrowserRouter>
+        <Header/>
         <AppRoutes />
       </BrowserRouter>
     </>
