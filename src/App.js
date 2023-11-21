@@ -1,6 +1,4 @@
-import logo from './logo.svg';
 import './App.css';
-import MeuBotao from './components/MeuBotao';
 import { BrowserRouter as Router, Link, BrowserRouter } from 'react-router-dom';
 import AppRoutes from './AppRoutes';
 
@@ -8,7 +6,7 @@ function Header() {
   return(
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
-        <Link to="/" className='navbar-brand'>Turismo</Link>
+        <Link to="/" className='navbar-brand'>Home</Link>
         
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
@@ -22,6 +20,7 @@ function Header() {
           </ul>
 
         </div>
+        
       </div>
     </nav>
   );
