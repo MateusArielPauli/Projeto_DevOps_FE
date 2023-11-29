@@ -1,29 +1,41 @@
-import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import './App.css';
+import { BrowserRouter as Router, Link, BrowserRouter } from 'react-router-dom';
+import AppRoutes from './AppRoutes';
 
-import { Home } from "./pages/Home";
-import { Login } from "./pages/Login";
-import { Perfil } from "./pages/Perfil";
-import { Passeio } from "./pages/Passeio";
-import { NotFoundPage } from "./pages/NotFoundPage";
+function Header() {
+  return(
+    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+      <div className="container-fluid">
+        <Link to="/" className='navbar-brand'>Home</Link>
+        
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            
+            <li className="nav-item">
+              <Link to="/user" className='nav-link'>Usuário</Link>
+            </li>
+          </ul>
 
-
-import "./App.scss";
-
-const App = () => {
-  return (
-    <BrowserRouter>
-      <div className="App">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/perfil" element={<Perfil />} />
-          <Route path="/passeio" element={<Passeio />} />
-          <Route element={<NotFoundPage />} />
-        </Routes>
+        </div>
+        
       </div>
-    </BrowserRouter>
+    </nav>
   );
-};
+}
 
-export default App;
+export default function App() {
+  return (
+    <>
+
+      <BrowserRouter>
+        <Header />
+
+        <AppRoutes />
+      </BrowserRouter>
+    
+    </>
+  );
+}
