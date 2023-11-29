@@ -1,16 +1,32 @@
-document.addEventListener('DOMContentLoaded', function () {
-    document.getElementById('loginForm').addEventListener('submit', function (event) {
-        event.preventDefault();
+import React from "react";
 
-        // Obtenha os valores do formulário
-        const username = document.getElementById('username').value;
-        const password = document.getElementById('password').value;
+export default function Login(){
+    return(
+        <>
+            <center>
+                <br/>
+                <br/>
+                <h2>Entre com seu usuário e senha</h2>
+                <br/>
+                <br/>
 
-        // Simples lógica de validação de login (substitua por uma lógica real no seu aplicativo)
-        if (username === 'usuario' && password === 'senha') {
-            document.getElementById('loginMessage').innerText = 'Login bem-sucedido!';
-        } else {
-            document.getElementById('loginMessage').innerText = 'Credenciais inválidas. Tente novamente.';
-        }
-    });
-});
+            
+                <form>
+                    <label htmlFor="username">Usuário: &emsp;&emsp;</label>
+                    <input type="text" id="username" name="username" required />
+                    <br/>
+                    <br/>
+                    <label htmlFor="password"> Senha:&emsp;&emsp;&emsp;</label>
+                    <input type="password" id="password" name="password" required />
+                    <br/>
+                    <br/>
+                    <button type="submit">Entrar</button>
+                </form>
+                <br/>
+                <br/>
+                Por razões de segurança, por favor clique em "Sair" quando<br/>
+                 terminar de acessar os serviços que precisam de autenticação!
+            </center>
+        </>
+    );
+}
