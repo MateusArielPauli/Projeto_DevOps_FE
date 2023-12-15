@@ -14,6 +14,8 @@ FROM nginx:1.17.1-alpine
 
 WORKDIR /etc/nginx
 
-RUN ls -la
+COPY nginx.conf ./
+
+COPY --from=builder /app/build /usr/share/nginx/html
 
 CMD ["nginx", "-g", "daemon off;"]
