@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { API_URL } from '../../AppConsts';
 import { useNavigate } from "react-router-dom";
 
+
 /**
  * Componente funcional de paginação dos dados.
  *
@@ -111,7 +112,7 @@ export default function UserList() {
           <i className="fas fa-plus-circle"></i> New
         </button>
       </h2>
-      <p>Lista de usuários obtidos a partir da API https://reqres.in.</p>
+      <p>Lista de usuários obtidos a partir da API</p>
 
 
       <table className='table table-striped'>
