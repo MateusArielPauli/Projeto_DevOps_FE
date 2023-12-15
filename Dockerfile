@@ -14,6 +14,6 @@ FROM nginx:1.17.1-alpine
 
 WORKDIR /
 
-RUN ls -la /app
+RUN ls -la
 
 CMD ["nginx", "-g", "daemon off;"]
