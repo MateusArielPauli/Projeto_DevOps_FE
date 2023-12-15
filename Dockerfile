@@ -12,7 +12,7 @@ RUN npm run build
 
 FROM nginx:1.17.1-alpine
 
-WORKDIR /
+WORKDIR /etc/nginx
 
 RUN ls -la
 
